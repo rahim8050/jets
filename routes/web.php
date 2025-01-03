@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\contentTesting;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\contentTestingController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -25,3 +27,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('/content', [contentTestingController::class, 'index'])->name('signup');
