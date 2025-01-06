@@ -33,7 +33,7 @@ require __DIR__.'/auth.php';
 // Route::apiResource('products', ProductController::class);
 Route::get('/car/search', [CarController::class,'search'])->name('car.search');
 Route::resource('car', CarController::class);
-Route::get('/show','show')
+
 Route::get('/content', [contentTestingController::class, 'index'])->name('content');
 Route::get('/login', [LogInController::class, 'create'])->name('signup');
 Route::get('/signup', [SignupController::class, 'signup'])->name('signup');
