@@ -61,4 +61,8 @@ class CarController extends Controller
     {
         //
     }
+    public function search(Request $request)
+    {
+        return view('content.index');
+    }
 }
