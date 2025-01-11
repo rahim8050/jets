@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\homecontroller;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -37,3 +38,5 @@ Route::get('/indexing', [CarController::class, 'search'])->name('indexing');
 Route::get('/content', [contentTestingController::class, 'index'])->name('content');
 Route::get('/login', [LogInController::class, 'create'])->name('signup');
 Route::get('/signup', [SignupController::class, 'signup'])->name('signup');
+Route::get('/home', [homecontroller::class, 'index'])->name('index');
+
