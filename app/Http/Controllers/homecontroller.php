@@ -11,6 +11,7 @@ class homecontroller extends Controller
             ['name'=>'Mercy'],
             ['name'=>'John'],
          )->create();
+         Examplefactory
     
     public function index(){
         return view('car.index');
