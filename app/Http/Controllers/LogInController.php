@@ -9,4 +9,6 @@ class LogInController extends Controller
     public function create(){
         return view("login");
     }
+    public function details{
+    'email'=>'email'
 }
