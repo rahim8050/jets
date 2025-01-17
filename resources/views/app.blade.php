@@ -18,6 +18,7 @@
     </head>
     <body class="font-sans antialiased">
 </x-header>
+</card-show>
         @inertia
     </x-card>
     </body>
