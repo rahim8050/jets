@@ -10,4 +10,4 @@ class LogInController extends Controller
 public function details() {
     return ['email' => 'email'];
 }
-?>
+}
