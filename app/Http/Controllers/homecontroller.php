@@ -7,11 +7,8 @@ use Illuminate\Http\Request;
 
 class homecontroller extends Controller
 {
-    User::factory()->count(10)->sequence(
-            ['name'=>'Mercy'],
-            ['name'=>'John'],
-         )->create();
-         Examplefactory
+   
+        
     
     public function index(){
         return view('car.index');
