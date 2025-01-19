@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\homecontroller;
+use App\Http\Controllers\PageController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -31,6 +32,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('page/display',[PageController::class,'index']);
+Route::resource('page',PageController::class);
 // Route::apiResource('products', ProductController::class);
 Route::get('/car/search', [CarController::class,'search'])->name('car.search');
 Route::resource('car', CarController::class);
