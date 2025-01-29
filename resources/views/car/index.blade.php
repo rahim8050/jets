@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 
     <title>SB Admin 2 - Dashboard</title>
 
@@ -23,7 +24,7 @@
 </head>
 
 <body id="page-top">
-
+    <x-card/>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -754,6 +755,7 @@
     <!-- Page level custom scripts -->
     <script src="../../../js/demo/chart-area-demo.js"></script>
     <script src="../../../js/demo/chart-pie-demo.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.mi
 
 </body>
 
