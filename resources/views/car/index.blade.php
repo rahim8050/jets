@@ -26,6 +26,7 @@
 <body id="page-top">
     <x-card/>
     <x-header/>
+    <x-carding/>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
