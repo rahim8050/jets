@@ -25,6 +25,7 @@
 
 <body id="page-top">
     <x-card/>
+    <x-header/>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
