@@ -27,6 +27,7 @@
     <x-card/>
     <x-header/>
     <x-carding/>
+    <x-lists/>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
