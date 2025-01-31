@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Double;
 use App\Models\Maker;
 use App\Models\Test;
 use App\Models\User;
@@ -17,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory(10)->create();
-        Test::factory(10)->create();
+        // User::factory(10)->create();
+        Double::factory(10)->create();
     }
 }
