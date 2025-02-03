@@ -3,4 +3,8 @@
         <div>
             <p>Wishing you a productive day!</p>
         </div>
+      
+        {{ $slot }}
+        {{ $double->type }}
+        {{ $double->company}}
 </div>
