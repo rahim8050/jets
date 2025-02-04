@@ -1,3 +1,4 @@
+@props(['title', 'css'])
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
-    <title>css</title>
+   
 </head>
 <body>
     
