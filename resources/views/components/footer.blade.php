@@ -14,6 +14,9 @@
         <li>
             <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
         </li>
+<li>
+            <a href="#" class="hover:underline me-4 md:me-6">About Us</a>
+        </li>
         <li>
             <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
         </li>
