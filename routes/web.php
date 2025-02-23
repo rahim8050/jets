@@ -30,7 +30,9 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 Route::get('/search',function(Request $request){
-    return User::search($request->q)->get();
+    return User::search($request->q)
+    ->orderBy('id', 'desc')
+    ->paginate(10);
 });
 // Route::get('/search', [CarController::class, 'search'])->name('search');
 Route::get('page/display',[PageController::class,'index']);
