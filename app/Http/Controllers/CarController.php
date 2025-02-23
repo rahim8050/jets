@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -61,8 +62,9 @@ class CarController extends Controller
     {
         //
     }
-    public function search(Request $request)
-    {
-        return view('content.index');
-    }
+    // public function search(Request $request)
+    // {
+    //    User::Search($request->q)->get();
+
+    // }
 }

@@ -11,6 +11,8 @@ use App\Http\Controllers\LogInController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\contentTestingController;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 Route::get('/',function(){
     return view('car.index');
@@ -27,6 +29,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('/search',function(Request $request){
+    return User::search($request->q)->get();
+});
+// Route::get('/search', [CarController::class, 'search'])->name('search');
 Route::get('page/display',[PageController::class,'index']);
 Route::resource('page',PageController::class);
 // Route::apiResource('products', ProductController::class);
