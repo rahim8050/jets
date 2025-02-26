@@ -15,7 +15,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 Route::get('/',function(){
-    return view('car.index');
+    return view('car.index', [
+        'users' => User::all()
+    ]);
 });
     
 Route::get('/dashboard', function () {
