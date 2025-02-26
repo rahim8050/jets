@@ -55,16 +55,14 @@ class CarController extends Controller
         return view('car.update');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
     // public function search(Request $request)
     // {
     //    User::Search($request->q)->get();
 
     // }
+    public function destroy(user  $user)
+    {
+        $user->delete();
+        return redirect()->route('car.index');
+    }
 }
