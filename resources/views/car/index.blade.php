@@ -2,21 +2,21 @@
 @section('content')
  @foreach ($users as $user) 
 <div class="container">
-<div class="row">
-    <div class="col-sm-4">
-        <table class="table table-striped">
-            <tr>
-                <td>First Name</td>
-                <td>{{$user['name']}}</td>
-            </tr>
-             <tr>
-                 <td>LastName</td>
-                <td>{{$user['email']}}</td>
-            </tr> 
-            
-        </table>
+    <div class="row">
+        <div class="col-sm-6">  
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title
+                    ">Name: {{$user['name']}}</h5>
+                    <p class="card-text">Email: {{$user['email']}}</p>
+                    <button class="btn btn-primary">Update</button>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-success">View</button>
+        </div>
     </div>
+</div>
 @endforeach
+
 
 
 {{-- @foreach ($users as $user)
