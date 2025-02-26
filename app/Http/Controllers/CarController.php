@@ -10,10 +10,14 @@ class CarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return view('car.index');
-    }
+   // app/Http/Controllers/CarController.php
+// use App\Models\User;
+
+public function index()
+{
+    $users = User::all(); // Fetch users from the database
+    return view('car.index', ['users' => $users]); // Pass $users to the view
+}
 
     /**
      * Show the form for creating a new resource.
@@ -60,9 +64,9 @@ class CarController extends Controller
     //    User::Search($request->q)->get();
 
     // }
-    public function destroy(user  $user)
-    {
-        $user->delete();
-        return redirect()->route('car.index');
-    }
+    public function destroy($id)
+{
+    User::findOrFail($id)->delete();
+    return redirect()->back()->with('success', 'User deleted!');
+}
 }

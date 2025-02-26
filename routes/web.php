@@ -17,13 +17,17 @@ use Illuminate\Http\Request;
 Route::get('/',function(){
     return view('car.index', [
         'users' => User::all()
+     
     ]);
 });
     
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/destroy/[id}', [CarController::class, 'destroy'])->name('destroy');
+// Route::post('/users/destroy/{id}', [CarController::class, 'destroy'])->name('destroy');
+// routes/web.php
+// Route::delete('/users/{id}', [CarController::class, 'destroy'])->name('destroy');
+Route::delete('/users/{id}', [CarController::class, 'destroy'])->name('users.destroy');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
