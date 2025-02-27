@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Double;
 use App\Models\Maker;
+use App\Models\Students;
 use App\Models\Test;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         // User::factory(10)->create();
-        Double::factory(100)->create();
+        // Double::factory(100)->create();
+        Students::factory(100)->create();
     }
 }
