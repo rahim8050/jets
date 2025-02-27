@@ -1,18 +1,20 @@
 <?php
 
-use App\Http\Controllers\homecontroller;
-use App\Http\Controllers\PageController;
+use App\Models\User;
 use Inertia\Inertia;
+use App\Models\Students;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\contentTesting;
+use App\Http\Controllers\homecontroller;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogInController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\contentTestingController;
-use App\Models\User;
-use Illuminate\Http\Request;
 
 Route::get('/',function(){
     return view('car.index', [
@@ -28,7 +30,9 @@ Route::get('/dashboard', function () {
 // routes/web.php
 // Route::delete('/users/{id}', [CarController::class, 'destroy'])->name('destroy');
 Route::delete('/users/{id}', [CarController::class, 'destroy'])->name('users.destroy');
-
+Route::get('/students', function () {
+    return view('students.index', ['Students' => Students::all()]);
+});
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
