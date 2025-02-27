@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        @foreach ($users as $user) {{-- Now $users is defined --}}
+        @foreach ($users as $user) 
         <div class="col-sm-6">
             <div class="card">
                 <div class="card-body">
